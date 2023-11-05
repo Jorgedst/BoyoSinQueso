@@ -40,49 +40,39 @@ public class Labfinal_CarlosDeLaRosa_JorgeSilva_SamuelTilano {
                         + "<html><p Style= \" color: Black; text-align: center; padding: 10px 100px 40px 100px; margin: 0px 80px 0px 80px;font-size: 15px;\">"
                         + "GUÍA: Ingresa el numero correspondiente a la opción que deseas seleccionar. (>‿◠)✌ </p></html>", "MVJ+", JOptionPane.PLAIN_MESSAGE));
                 if (op < 1 || op > 3) {
+                    ImageIcon InvalidIcon = cargarIcono("/Imgs/Spongebob.png", 200, 200);
                     JOptionPane.showMessageDialog(null, "<html><p style= \" color: Black; font-size: 15px;padding:15px; text-align:center;\"> "
-                            + "El numero que ingresaste no es valido, <br>𝐢𝐧𝐭𝐞𝐧𝐭𝐚𝐥𝐨 𝐧𝐮𝐞𝐯𝐚𝐦𝐞𝐧𝐭𝐞....</p></html>", "MVJ+", JOptionPane.PLAIN_MESSAGE, icintenta("/Images/spongebob.png"));
+                            + "El numero que ingresaste no es valido, <br>𝐢𝐧𝐭𝐞𝐧𝐭𝐚𝐥𝐨 𝐧𝐮𝐞𝐯𝐚𝐦𝐞𝐧𝐭𝐞....</p></html>", "MVJ+", JOptionPane.PLAIN_MESSAGE, InvalidIcon);
                 }
             } while (op < 1 || op > 3);
 
             switch (op) {
                 case 1:
-                    JOptionPane.showMessageDialog(null, "\n \n ","Prueba", JOptionPane.PLAIN_MESSAGE, iconoburro("/Imgs/burro.jpg",70,70));
+                    ImageIcon burroIcon = cargarIcono("/Imgs/burro.jpg", 350, 300);
+                    JOptionPane.showMessageDialog(null, "\n \n ", "Prueba", JOptionPane.PLAIN_MESSAGE, burroIcon);
                     break;
                 case 2:
+                    ImageIcon ConstrucciónIcon = cargarIcono("/Imgs/working.png", 250, 250);
                     JOptionPane.showMessageDialog(null, "<html><p style = \" color: black; font-size: 30px; padding: 10px; margin:10px; text-align:center; \">En construcción...</p></html> ",
-                            "MVJ+", JOptionPane.PLAIN_MESSAGE, iconoconstrucción("/Imgs/working.png"));
+                            "MVJ+", JOptionPane.PLAIN_MESSAGE, ConstrucciónIcon);
                     break;
                 case 3:
+                    ImageIcon adiosIcon = cargarIcono("/Imgs/adios.jpg", 250, 250);
                     JOptionPane.showMessageDialog(null, "<html><p Style= \" Color: Black; Font-size: 30px; text-align:center; padding: 15px;\">¡Hasta Pronto!</p></html>",
-                            "MVJ+", JOptionPane.PLAIN_MESSAGE, icdesp("/Imgs/adios"));
+                            "MVJ+", JOptionPane.PLAIN_MESSAGE, adiosIcon);
                     break;
             }
         } while (op != 3);
     }
-
-    private static Icon iconoburro(String imgsburrojpg, int width, int height) {
-        ImageIcon icon = new ImageIcon(Labfinal_CarlosDeLaRosa_JorgeSilva_SamuelTilano.class.getResource("/Imgs/burro.jpg"));
-        icon = new ImageIcon(icon.getImage().getScaledInstance(100, 100, java.awt.Image.SCALE_SMOOTH));
-        return icon;
+        public static ImageIcon cargarIcono(String filePath, int width, int height) {
+            ImageIcon icon = new ImageIcon(IconManager.class.getResource(filePath));
+            icon = new ImageIcon(icon.getImage().getScaledInstance(width, height, java.awt.Image.SCALE_SMOOTH));
+            return icon;
     }
+    private static class IconManager {
 
-    private static Icon iconoconstrucción(String imgsworkingpng) {
-        ImageIcon icon = new ImageIcon(Labfinal_CarlosDeLaRosa_JorgeSilva_SamuelTilano.class.getResource("/Imgs/working.png"));
-        icon = new ImageIcon(icon.getImage().getScaledInstance(250, 250, java.awt.Image.SCALE_SMOOTH));
-        return icon;
-    }
-
-    private static Icon icdesp(String imgsadios) {
-        ImageIcon icon = new ImageIcon(Labfinal_CarlosDeLaRosa_JorgeSilva_SamuelTilano.class.getResource("/Imgs/nice.png"));
-        icon = new ImageIcon(icon.getImage().getScaledInstance(250, 250, java.awt.Image.SCALE_SMOOTH));
-        return icon;
-    }
-
-    private static Icon icintenta(String imagesspongebobpng) {
-        ImageIcon icon = new ImageIcon(Labfinal_CarlosDeLaRosa_JorgeSilva_SamuelTilano.class.getResource("/Imgs/spongebob.png"));
-        icon = new ImageIcon(icon.getImage().getScaledInstance(200, 200, java.awt.Image.SCALE_SMOOTH));
-        return icon;
+        public IconManager() {
+        }
     }
 
 }
