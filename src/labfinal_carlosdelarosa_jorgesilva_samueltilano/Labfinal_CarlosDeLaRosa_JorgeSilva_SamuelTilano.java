@@ -48,8 +48,8 @@ public class Labfinal_CarlosDeLaRosa_JorgeSilva_SamuelTilano {
 
             switch (op) {
                 case 1:
-                    ImageIcon burroIcon = cargarIcono("/Imgs/burro.jpg", 350, 300);
-                    JOptionPane.showMessageDialog(null, "\n \n ", "Prueba", JOptionPane.PLAIN_MESSAGE, burroIcon);
+                    JOptionPane.showMessageDialog(null, "<html><p style= \" color: #3A4D39; font-size: 50px;\">"
+                            + "HOLA </p> </html>","MVJ+" , JOptionPane.PLAIN_MESSAGE);
                     break;
                 case 2:
                     ImageIcon ConstrucciónIcon = cargarIcono("/Imgs/working.png", 250, 250);
