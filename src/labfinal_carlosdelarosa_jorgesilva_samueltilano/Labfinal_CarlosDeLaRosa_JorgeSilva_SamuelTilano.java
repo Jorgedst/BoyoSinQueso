@@ -22,7 +22,7 @@ public class Labfinal_CarlosDeLaRosa_JorgeSilva_SamuelTilano {
         JOptionPane.showMessageDialog(null, "<html><p style = \"color: black; font: 30px; padding: 20px; background-color: #80b3FF; border:5px solid #687EFF ;text-align: center\">MATEMÁTICAS VERSATILES, "
                 + "JUEGOS Y MÁS</p><br><p style = \" margin: 5px; font-size:20px; padding:20px;text-align: center; \">Bienvenid@ a Matemáticas Versátiles, Juegos Y Más(𝐌𝐕𝐉+), este un programa que combina la diversión<br> "
                 + "de juegos emocionantes, con calculos matematicos. Si te encanta jugar a juegos como la ruleta, Triqui, Bingo, "
-                + "<br>o eres más intelectual y te gusta el cálculo, has instalado el programa adecuado. PRUEBPRUEBAPRUEBA <br>⊂ ͡• ‿‿ ͡•つ</p></html>", "MVJ+", JOptionPane.PLAIN_MESSAGE);
+                + "<br>o eres más intelectual y te gusta el cálculo, has instalado el programa adecuado. <br>⊂ ͡• ‿‿ ͡•つ</p></html>", "MVJ+", JOptionPane.PLAIN_MESSAGE);
 
         //Menú de opciones
         int op;
